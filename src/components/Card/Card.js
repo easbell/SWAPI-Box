@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Card = ( { cardInfo } ) => {
-  
-  return (
-    <div>
-      <p>{cardInfo.card.name}</p>
-    </div>
-  )
+class Card extends Component {
+  constructor() {
+    super()
+  }
+
+  mapProps = () => {
+    return Object.keys(this.props.cardInfo.card).map(key => {
+      return (
+        <div>{key}: {this.props.cardInfo.card[key]}</div>
+      )
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        {this.mapProps()}
+      </div>
+    )
+  }
 }
-
-// Name
-// Homeworld
-// Species
-// Population of Homeworld
 
 export default Card;

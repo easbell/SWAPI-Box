@@ -30,10 +30,58 @@ class App extends Component {
   
   handleSort = (filter) => {
     const url = `https://swapi.co/api/${filter}`
-    fetch(url)
+    if(filter === 'people') {
+      this.fetchPeople(url);
+    }
+  }
+
+  fetchPeople = (link) => {
+    fetch(link)
       .then(response => response.json())
-      .then(data => this.setState({ cardsSelected: data.results }))
+      .then(fetchMore => this.fetchAdditionalPeopleInfo(fetchMore.results))
+      .then(cardsSelected => this.setState({ cardsSelected }))
       .catch(error => error.message)
+  }
+
+  combineInfo = (allInfo) => {
+    const species = allInfo.splice(10, allInfo.length-1)
+    let allPeople = [];
+    allInfo.forEach((person, i) => {
+      allPeople.push(Object.assign({}, person, species[i]));
+    });
+    return allPeople;
+  }
+
+  fetchAdditionalPeopleInfo = (other) => {
+    const homeworlds = this.fetchHomeWorld(other)
+    const species = this.fetchSpecies(other)
+    const all = homeworlds.concat(species)
+    return Promise.all(all)
+      .then(values => this.combineInfo(values))
+  }
+  
+  fetchHomeWorld = (homeInfo) => {
+    const unresolvedHomeWorlds = homeInfo.map(person => {
+      return (
+        fetch(person.homeworld)
+          .then(response => response.json())
+          .then(data => ({name: person.name, homeworld: data.name, populationOfHomeworld: data.population}))
+          .catch(error => error.message)          
+      )
+    })
+    return unresolvedHomeWorlds
+  }
+
+  fetchSpecies = (speciesInfo) => {
+    const unresolvedSpecies = speciesInfo.map(person => {
+      return (
+        fetch(person.species)
+          .then(response =>  response.json())
+          .then(data => ({species: data.name}))
+          .catch(error => error.message)
+      )
+    })
+    return unresolvedSpecies
   }
 
   render() {
@@ -50,9 +98,11 @@ class App extends Component {
           <FilterControls 
             handleSort={this.handleSort}
           />
-          <CardContainer 
-            cardsSelected={cardsSelected}
-          />
+          {cardsSelected.length &&
+            <CardContainer 
+              cardsSelected={cardsSelected}
+            />
+          }
         </div>
       </div>
     );
