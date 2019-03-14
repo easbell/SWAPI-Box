@@ -5,16 +5,10 @@ export class CardContainer extends Component {
 
   displayPeople = () => {
     const { cardsSelected } = this.props
+    console.log(cardsSelected)
     return cardsSelected.map(card => {
-      return <Card cardInfo={{card}}/>
+      return <Card key={card.name} cardInfo={{card}}/>
     })
-  }
-
-  checkFilter = () => {
-    const { cardsSelected } = this.props
-    if(cardsSelected[0].hasOwnProperty('homeworld')) {
-      this.displayPeople()
-    }
   }
 
   render() {

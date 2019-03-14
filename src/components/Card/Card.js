@@ -8,7 +8,7 @@ class Card extends Component {
   mapProps = () => {
     return Object.keys(this.props.cardInfo.card).map(key => {
       return (
-        <div>{key}: {this.props.cardInfo.card[key]}</div>
+        <p key={key}>{key}: {this.props.cardInfo.card[key]}</p>
       )
     })
   }

@@ -32,7 +32,38 @@ class App extends Component {
     const url = `https://swapi.co/api/${filter}`
     if(filter === 'people') {
       this.fetchPeople(url);
+    } else if (filter === 'planets') {
+      this.fetchPlanets(url)
+    } else {
+      this.fetchVehicles(url)
     }
+  }
+
+  fetchVehicles = (link) => {
+    fetch(link)
+      .then(response => response.json())
+      .then(data => this.simplifyVehicles(data.results))
+      .then(cardsSelected => this.setState({ cardsSelected }))
+  }
+
+  simplifyVehicles = (allInfo) => {
+    return allInfo.map(info => {
+      return ({name: info.name, model: info.model, class: info.vehicle_class, passengers: info.passengers})
+    })
+  }
+
+  fetchPlanets = (link) => {
+    fetch(link)
+      .then(response => response.json())
+      .then(data => this.fetchAdditionalPlanetInfo(data.results))
+      .then(cardsSelected => this.setState( {cardsSelected} ))
+      .catch(error => error.message)
+  }
+
+  fetchAdditionalPlanetInfo = (allInfo) => {
+    return allInfo.map(info => {
+      return ({name: info.name, terrain: info.terrain, population: info.population, climate: info.climate})
+    })
   }
 
   fetchPeople = (link) => {
@@ -65,7 +96,7 @@ class App extends Component {
       return (
         fetch(person.homeworld)
           .then(response => response.json())
-          .then(data => ({name: person.name, homeworld: data.name, populationOfHomeworld: data.population}))
+          .then(data => ({name: person.name, homeworld: data.name, population: data.population}))
           .catch(error => error.message)          
       )
     })

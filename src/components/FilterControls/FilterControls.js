@@ -11,6 +11,7 @@ class FilterControls extends Component {
   handleSelection = (e) => {
     this.props.handleSort(e.target.className)
   }
+  // Good place to refactor? Probably don't need another func here
 
   render() {
     return (
