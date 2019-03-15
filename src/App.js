@@ -129,11 +129,9 @@ class App extends Component {
           <FilterControls 
             handleSort={this.handleSort}
           />
-          {cardsSelected.length &&
-            <CardContainer 
-              cardsSelected={cardsSelected}
-            />
-          }
+          <CardContainer 
+            cardsSelected={cardsSelected}
+          />
         </div>
       </div>
     );

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Card from './../Card/Card';
 
 export class CardContainer extends Component {
-
   displayPeople = () => {
     const { cardsSelected } = this.props
     console.log(cardsSelected)
