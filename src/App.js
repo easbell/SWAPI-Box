@@ -67,12 +67,19 @@ class App extends Component {
     })
   }
 
-  fetchPeople = (link) => {
-    fetch(link)
-      .then(response => response.json())
-      .then(fetchMore => this.fetchAdditionalPeopleInfo(fetchMore.results))
-      .then(cardsSelected => this.setState({ cardsSelected }))
-      .catch(error => error.message)
+  fetchPeople = async (link) => {
+    const fetchedData = await FetchCalls(link)
+    const cardsSelected = await this.fetchAdditionalPeopleInfo(fetchedData.results)
+    this.setState({ cardsSelected })
+      // .catch(error => error.message)
+  }
+
+  fetchAdditionalPeopleInfo = async (other) => {
+    const homeworlds = await this.fetchHomeWorld(other)
+    const species = await this.fetchSpecies(other)
+    const all = homeworlds.concat(species)
+    const resolvedPeople = await Promise.all(all)
+    return this.combineInfo(resolvedPeople)
   }
 
   combineInfo = (allInfo) => {
@@ -82,14 +89,6 @@ class App extends Component {
       allPeople.push(Object.assign({}, person, species[i]));
     });
     return allPeople;
-  }
-
-  fetchAdditionalPeopleInfo = (other) => {
-    const homeworlds = this.fetchHomeWorld(other)
-    const species = this.fetchSpecies(other)
-    const all = homeworlds.concat(species)
-    return Promise.all(all)
-      .then(values => this.combineInfo(values))
   }
   
   fetchHomeWorld = (homeInfo) => {
