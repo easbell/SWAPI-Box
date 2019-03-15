@@ -16,14 +16,13 @@ class App extends Component {
   }
   
   // break out fetch call (each is the same, fetch then the json response)
-  componentDidMount() {
+  async componentDidMount() {
     const random = this.getRandomNum()
     const url = `https://swapi.co/api/films/${random}`
-    fetch(url)
-      .then(response => response.json())
-      .then(movie => ({openingCrawl: movie.opening_crawl, title: movie.title, releaseDate: movie.release_date}))
-      .then(info => this.setState({randomFilm: info}))
-      .catch(error => error.message)
+    const fetchedData = await FetchCalls(url)
+    const randomFilm = ({openingCrawl: fetchedData.opening_crawl, title: fetchedData.title, releaseDate: fetchedData.release_date})
+    this.setState({randomFilm: randomFilm})
+      // .catch(error => error.message)
   }
 
   getRandomNum = () => {
