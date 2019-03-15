@@ -3,6 +3,7 @@ import './App.css';
 import Splash from './components/Splash/Splash';
 import FilterControls from './components/FilterControls/FilterControls';
 import CardContainer from './components/CardContainer/CardContainer';
+import { FetchCalls } from './FetchCalls';
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,7 @@ class App extends Component {
     }
   }
   
+  // break out fetch call (each is the same, fetch then the json response)
   componentDidMount() {
     const random = this.getRandomNum()
     const url = `https://swapi.co/api/films/${random}`
@@ -39,11 +41,10 @@ class App extends Component {
     }
   }
 
-  fetchVehicles = (link) => {
-    fetch(link)
-      .then(response => response.json())
-      .then(data => this.simplifyVehicles(data.results))
-      .then(cardsSelected => this.setState({ cardsSelected }))
+  fetchVehicles = async (link) => {
+    const fetchedData = await FetchCalls(link)
+    const cardsSelected = await this.simplifyVehicles(fetchedData.results)
+    this.setState({ cardsSelected })
   }
 
   simplifyVehicles = (allInfo) => {
