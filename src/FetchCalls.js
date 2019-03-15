@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FetchCalls = (link) => {
+const fetchCalls = (link) => {
   return fetch(link)
     .then(response => {
      if(!response.ok) {
@@ -10,4 +10,4 @@ const FetchCalls = (link) => {
   })
 }
 
-export { FetchCalls }
+export { fetchCalls }
