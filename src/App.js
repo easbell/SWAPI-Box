@@ -53,12 +53,11 @@ class App extends Component {
     })
   }
 
-  fetchPlanets = (link) => {
-    fetch(link)
-      .then(response => response.json())
-      .then(data => this.fetchAdditionalPlanetInfo(data.results))
-      .then(cardsSelected => this.setState( {cardsSelected} ))
-      .catch(error => error.message)
+  fetchPlanets = async (link) => {
+    const fetchedData = await FetchCalls(link)
+    const cardsSelected = this.fetchAdditionalPlanetInfo(fetchedData.results)
+    this.setState( {cardsSelected} )
+      // .catch(error => error.message)
   }
 
   fetchAdditionalPlanetInfo = (allInfo) => {
