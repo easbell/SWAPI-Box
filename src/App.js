@@ -3,7 +3,7 @@ import './App.css';
 import Splash from './components/Splash/Splash';
 import FilterControls from './components/FilterControls/FilterControls';
 import CardContainer from './components/CardContainer/CardContainer';
-import { FetchCalls } from './FetchCalls';
+import { fetchCalls } from './fetchCalls';
 
 class App extends Component {
   constructor() {
@@ -15,14 +15,18 @@ class App extends Component {
     }
   }
   
-  // break out fetch call (each is the same, fetch then the json response)
   async componentDidMount() {
     const random = this.getRandomNum()
     const url = `https://swapi.co/api/films/${random}`
-    const fetchedData = await FetchCalls(url)
-    const randomFilm = ({openingCrawl: fetchedData.opening_crawl, title: fetchedData.title, releaseDate: fetchedData.release_date})
-    this.setState({randomFilm: randomFilm})
-      // .catch(error => error.message)
+    try {
+      const fetchedData = await fetchCalls(url)
+      const randomFilm = ({openingCrawl: fetchedData.opening_crawl, title: fetchedData.title, releaseDate: fetchedData.release_date})
+      this.setState({randomFilm: randomFilm})
+    } catch(error) {
+      this.setState({
+        errorStatus: error.message,
+      })
+    }
   }
 
   getRandomNum = () => {
@@ -41,9 +45,15 @@ class App extends Component {
   }
 
   fetchVehicles = async (link) => {
-    const fetchedData = await FetchCalls(link)
-    const cardsSelected = await this.simplifyVehicles(fetchedData.results)
-    this.setState({ cardsSelected })
+    try {
+      const fetchedData = await fetchCalls(link)
+      const cardsSelected = await this.simplifyVehicles(fetchedData.results)
+      this.setState({ cardsSelected })
+    } catch(error) {
+      this.setState({
+        errorStatus: error.message,
+      })
+    }
   }
 
   simplifyVehicles = (allInfo) => {
@@ -53,10 +63,15 @@ class App extends Component {
   }
 
   fetchPlanets = async (link) => {
-    const fetchedData = await FetchCalls(link)
-    const cardsSelected = this.fetchAdditionalPlanetInfo(fetchedData.results)
-    this.setState( {cardsSelected} )
-      // .catch(error => error.message)
+    try {
+      const fetchedData = await fetchCalls(link)
+      const cardsSelected = this.fetchAdditionalPlanetInfo(fetchedData.results)
+      this.setState( {cardsSelected} )
+    } catch(error) {
+      this.setState({
+        errorStatus: error.message,
+      })
+    }
   }
 
   fetchAdditionalPlanetInfo = (allInfo) => {
@@ -66,10 +81,15 @@ class App extends Component {
   }
 
   fetchPeople = async (link) => {
-    const fetchedData = await FetchCalls(link)
-    const cardsSelected = await this.fetchAdditionalPeopleInfo(fetchedData.results)
-    this.setState({ cardsSelected })
-      // .catch(error => error.message)
+    try {
+      const fetchedData = await fetchCalls(link)
+      const cardsSelected = await this.fetchAdditionalPeopleInfo(fetchedData.results)
+      this.setState({ cardsSelected })
+    } catch(error) {
+      this.setState({
+        errorStatus: error.message,
+      })
+    }
   }
 
   fetchAdditionalPeopleInfo = async (other) => {
@@ -90,27 +110,17 @@ class App extends Component {
   }
   
   fetchHomeWorld = (homeInfo) => {
-    const unresolvedHomeWorlds = homeInfo.map(person => {
-      return (
-        fetch(person.homeworld)
-          .then(response => response.json())
-          .then(data => ({name: person.name, homeworld: data.name, population: data.population}))
-          .catch(error => error.message)          
-      )
+    return homeInfo.map(async person => {
+      const fetchedData = await fetchCalls(person.homeworld)
+      return ({name: person.name, homeworld: fetchedData.name, population: fetchedData.population})       
     })
-    return unresolvedHomeWorlds
   }
 
   fetchSpecies = (speciesInfo) => {
-    const unresolvedSpecies = speciesInfo.map(person => {
-      return (
-        fetch(person.species)
-          .then(response =>  response.json())
-          .then(data => ({species: data.name}))
-          .catch(error => error.message)
-      )
+    return speciesInfo.map(async person => {
+      const fetchedData = await fetchCalls(person.species)      
+      return ({species: fetchedData.name})
     })
-    return unresolvedSpecies
   }
 
   render() {
