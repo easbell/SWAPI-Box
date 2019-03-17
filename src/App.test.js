@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme'
 import { mockVehicleData, mockVehicleResult } from './mockData/mockVehicleData';

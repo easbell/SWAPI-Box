@@ -1,0 +1,736 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match snapshot with all data passed in 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    cardsSelected={
+      Array [
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Luke Skywalker",
+          "population": "200000",
+          "species": "Human",
+        },
+        Object {
+          "homeworld": "Tatooine",
+          "name": "C-3PO",
+          "population": "200000",
+          "species": "Droid",
+        },
+        Object {
+          "homeworld": "Naboo",
+          "name": "R2-D2",
+          "population": "4500000000",
+          "species": "Droid",
+        },
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Darth Vader",
+          "population": "200000",
+          "species": "Human",
+        },
+        Object {
+          "homeworld": "Alderaan",
+          "name": "Leia Organa",
+          "population": "2000000000",
+          "species": "Human",
+        },
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Owen Lars",
+          "population": "200000",
+          "species": "Human",
+        },
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Beru Whitesun lars",
+          "population": "200000",
+          "species": "Human",
+        },
+        Object {
+          "homeworld": "Tatooine",
+          "name": "R5-D4",
+          "population": "200000",
+          "species": "Droid",
+        },
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Biggs Darklighter",
+          "population": "200000",
+          "species": "Human",
+        },
+        Object {
+          "homeworld": "Stewjon",
+          "name": "Obi-Wan Kenobi",
+          "population": "unknown",
+          "species": "Human",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Luke Skywalker",
+                "population": "200000",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "C-3PO",
+                "population": "200000",
+                "species": "Droid",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Naboo",
+                "name": "R2-D2",
+                "population": "4500000000",
+                "species": "Droid",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Darth Vader",
+                "population": "200000",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Alderaan",
+                "name": "Leia Organa",
+                "population": "2000000000",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Owen Lars",
+                "population": "200000",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Beru Whitesun lars",
+                "population": "200000",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "R5-D4",
+                "population": "200000",
+                "species": "Droid",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Biggs Darklighter",
+                "population": "200000",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+        <Card
+          cardInfo={
+            Object {
+              "card": Object {
+                "homeworld": "Stewjon",
+                "name": "Obi-Wan Kenobi",
+                "population": "unknown",
+                "species": "Human",
+              },
+            }
+          }
+        />,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Luke Skywalker",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "Luke Skywalker",
+              "population": "200000",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "C-3PO",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "C-3PO",
+              "population": "200000",
+              "species": "Droid",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Naboo",
+              "name": "R2-D2",
+              "population": "4500000000",
+              "species": "Droid",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Darth Vader",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "Darth Vader",
+              "population": "200000",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Leia Organa",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Alderaan",
+              "name": "Leia Organa",
+              "population": "2000000000",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Owen Lars",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "Owen Lars",
+              "population": "200000",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Beru Whitesun lars",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "Beru Whitesun lars",
+              "population": "200000",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "R5-D4",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "R5-D4",
+              "population": "200000",
+              "species": "Droid",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Biggs Darklighter",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Tatooine",
+              "name": "Biggs Darklighter",
+              "population": "200000",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Obi-Wan Kenobi",
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "card": Object {
+              "homeworld": "Stewjon",
+              "name": "Obi-Wan Kenobi",
+              "population": "unknown",
+              "species": "Human",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke Skywalker",
+                  "population": "200000",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "C-3PO",
+                  "population": "200000",
+                  "species": "Droid",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Naboo",
+                  "name": "R2-D2",
+                  "population": "4500000000",
+                  "species": "Droid",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Darth Vader",
+                  "population": "200000",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Alderaan",
+                  "name": "Leia Organa",
+                  "population": "2000000000",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Owen Lars",
+                  "population": "200000",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Beru Whitesun lars",
+                  "population": "200000",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "R5-D4",
+                  "population": "200000",
+                  "species": "Droid",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Biggs Darklighter",
+                  "population": "200000",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+          <Card
+            cardInfo={
+              Object {
+                "card": Object {
+                  "homeworld": "Stewjon",
+                  "name": "Obi-Wan Kenobi",
+                  "population": "unknown",
+                  "species": "Human",
+                },
+              }
+            }
+          />,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Luke Skywalker",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Luke Skywalker",
+                "population": "200000",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "C-3PO",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "C-3PO",
+                "population": "200000",
+                "species": "Droid",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Naboo",
+                "name": "R2-D2",
+                "population": "4500000000",
+                "species": "Droid",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Darth Vader",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Darth Vader",
+                "population": "200000",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Leia Organa",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Alderaan",
+                "name": "Leia Organa",
+                "population": "2000000000",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Owen Lars",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Owen Lars",
+                "population": "200000",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Beru Whitesun lars",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Beru Whitesun lars",
+                "population": "200000",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "R5-D4",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "R5-D4",
+                "population": "200000",
+                "species": "Droid",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Biggs Darklighter",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Tatooine",
+                "name": "Biggs Darklighter",
+                "population": "200000",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Obi-Wan Kenobi",
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "card": Object {
+                "homeworld": "Stewjon",
+                "name": "Obi-Wan Kenobi",
+                "population": "unknown",
+                "species": "Human",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
