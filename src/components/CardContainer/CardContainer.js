@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from './../Card/Card';
 // import './CardContainer.css';
 
-const CardContainer = () =>{
+const CardContainer = ( {cardsSelected} ) =>{
   const displayCards = () => {
-    const { cardsSelected } = this.props
     return cardsSelected.map(card => {
       return <Card key={card.name} cardInfo={{card}}/>
     })
