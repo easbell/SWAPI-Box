@@ -3,7 +3,7 @@ import App from './App';
 import { shallow } from 'enzyme'
 import { mockVehicleData, mockVehicleResult } from './mockData/mockVehicleData';
 import { mockSpecies, mockPeopleData, mockAllPeople, mockPeopleResult, fetchAdditionalPeople } from './mockData/mockPeopleData'
-import { mockPlanetData,  } from './mockData/mockPlanetData';
+import { rawPlanetData, mockPlanetResult } from './mockData/mockPlanetData';
 import { fetchCalls } from './fetchCalls';
 
 describe('App', () => {
@@ -227,25 +227,25 @@ describe('App', () => {
       expect(window.fetch).toHaveBeenCalledWith(link)
     });
 
-    it('should call fetchAdditionalPlanetInfo', async () => {
+    it.skip('should call fetchAdditionalPlanetInfo', async () => {
 
       await wrapper.instance().fetchPlanets(link)
 
-      expect(mockFn).toHaveBeenCalledWith(mockPlanetData.results)
+      expect(mockFn).toHaveBeenCalledWith(rawPlanetData)
     });
 
     it('should set state upon a successful fetch', async () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         status: 200,
-        json: () => Promise.resolve(fetchAdditionalPeople)
+        json: () => Promise.resolve(rawPlanetData)
       }));
 
-      wrapper.instance().fetchAdditionalPeopleInfo = await jest.fn().mockImplementation(() => mockPeopleResult)
+      wrapper.instance().fetchAdditionalPeopleInfo = await jest.fn().mockImplementation(() => mockPlanetResult)
 
       await wrapper.instance().fetchPlanets(link)
 
-      expect(wrapper.state('cardsSelected')).toEqual(mockPeopleResult)
+      expect(wrapper.state('cardsSelected')).toEqual(mockPlanetResult)
     });
 
     it('should set state upon a failed fetch', async () => {
