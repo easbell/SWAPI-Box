@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Card from './../Card/Card';
+// import './CardContainer.css';
 
 export class CardContainer extends Component {
   displayPeople = () => {
     const { cardsSelected } = this.props
-    console.log(cardsSelected)
     return cardsSelected.map(card => {
       return <Card key={card.name} cardInfo={{card}}/>
     })
@@ -12,7 +12,7 @@ export class CardContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className='card-container'>
         {this.displayPeople()}
       </div>
     )

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class Card extends Component {
-  constructor() {
-    super()
-  }
 
   mapProps = () => {
     return Object.keys(this.props.cardInfo.card).map(key => {
@@ -15,7 +12,7 @@ class Card extends Component {
 
   render() {
     return (
-      <div>
+      <div className='card'>
         {this.mapProps()}
       </div>
     )

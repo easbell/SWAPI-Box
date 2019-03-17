@@ -11,15 +11,14 @@ class App extends Component {
     this.state = {
       randomFilm: {},
       cardsSelected: [],
-      error: ''
+      errorStatus: ''
     }
   }
   
   async componentDidMount() {
     const random = this.getRandomNum()
-    const url = `https://swapi.co/api/films/${random}`
     try {
-      const fetchedData = await fetchCalls(url)
+      const fetchedData = await fetchCalls(`https://swapi.co/api/films/${random}`)
       const randomFilm = ({openingCrawl: fetchedData.opening_crawl, title: fetchedData.title, releaseDate: fetchedData.release_date})
       this.setState({randomFilm: randomFilm})
     } catch(error) {
