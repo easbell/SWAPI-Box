@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 
-class Card extends Component {
-
-  mapProps = () => {
-    return Object.keys(this.props.cardInfo.card).map(key => {
+const Card = ( {cardInfo}) => {
+  const mapProps = () => {
+    return Object.keys(cardInfo.card).map(key => {
       return (
-        <p key={key}>{key}: {this.props.cardInfo.card[key]}</p>
+        <p key={key}>{key}: {cardInfo.card[key]}</p>
       )
     })
   }
 
-  render() {
-    return (
-      <div className='card'>
-        {this.mapProps()}
-      </div>
-    )
-  }
+  return (
+    <div className='card'>
+      {mapProps()}
+    </div>
+  )
 }
 
 export default Card;
