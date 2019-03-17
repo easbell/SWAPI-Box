@@ -92,13 +92,14 @@ class App extends Component {
   }
 
   fetchAdditionalPeopleInfo = async (other) => {
+    console.log(other)
     const homeworlds = await this.fetchHomeWorld(other)
     const species = await this.fetchSpecies(other)
     const all = homeworlds.concat(species)
     const resolvedPeople = await Promise.all(all)
     return this.combineInfo(resolvedPeople)
   }
-
+  
   combineInfo = (allInfo) => {
     const species = allInfo.splice(10, allInfo.length-1)
     let allPeople = [];
@@ -117,7 +118,7 @@ class App extends Component {
 
   fetchSpecies = (speciesInfo) => {
     return speciesInfo.map(async person => {
-      const fetchedData = await fetchCalls(person.species)      
+      const fetchedData = await fetchCalls(person.species)
       return ({species: fetchedData.name})
     })
   }
