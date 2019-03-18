@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       randomFilm: {},
       cardsSelected: [],
+      categorySelected: '',
       errorStatus: ''
     }
   }
@@ -34,6 +35,7 @@ class App extends Component {
   
   handleSort = (filter) => {
     const url = `https://swapi.co/api/${filter}`
+    this.setState({categorySelected: filter.toUpperCase()})
     if(filter === 'people') {
       this.fetchPeople(url);
     } else if (filter === 'planets') {
@@ -138,7 +140,7 @@ class App extends Component {
   }
 
   render() {
-    const { randomFilm, cardsSelected } = this.state;
+    const { randomFilm, cardsSelected, categorySelected } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -151,8 +153,10 @@ class App extends Component {
           <FilterControls 
             handleSort={this.handleSort}
           />
+          <h3 className='category'>{categorySelected}</h3>
           <CardContainer 
             cardsSelected={cardsSelected}
+            categorySelected={categorySelected}
           />
         </div>
       </div>

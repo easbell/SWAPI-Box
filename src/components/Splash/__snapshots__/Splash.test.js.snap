@@ -37,6 +37,7 @@ ShallowWrapper {
           1980-05-17
         </p>,
       ],
+      "className": "splash",
     },
     "ref": null,
     "rendered": Array [
@@ -93,6 +94,7 @@ ShallowWrapper {
             1980-05-17
           </p>,
         ],
+        "className": "splash",
       },
       "ref": null,
       "rendered": Array [

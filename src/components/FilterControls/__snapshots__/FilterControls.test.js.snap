@@ -23,7 +23,9 @@ ReactWrapper {
     },
     "ref": null,
     "rendered": Object {
-      "instance": <div>
+      "instance": <div
+        class="filter"
+      >
         <button
           class="people"
         >
@@ -63,6 +65,7 @@ ReactWrapper {
             Vehicles
           </button>,
         ],
+        "className": "filter",
       },
       "ref": null,
       "rendered": Array [
@@ -138,7 +141,9 @@ ReactWrapper {
       },
       "ref": null,
       "rendered": Object {
-        "instance": <div>
+        "instance": <div
+          class="filter"
+        >
           <button
             class="people"
           >
@@ -178,6 +183,7 @@ ReactWrapper {
               Vehicles
             </button>,
           ],
+          "className": "filter",
         },
         "ref": null,
         "rendered": Array [

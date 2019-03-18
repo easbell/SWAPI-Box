@@ -197,63 +197,63 @@ export const mockVehicleData = {
 
 export const mockVehicleResult = [
   {
-    class: "wheeled",
-    model: "Digger Crawler",
-    name: "Sand Crawler",
-    "passengers": "30"
+    Class: "wheeled",
+    Model: "Digger Crawler",
+    Name: "Sand Crawler",
+    "Passengers": "30"
   },
   {
-    class: "repulsorcraft",
-    model: "T-16 skyhopper",
-    name: "T-16 skyhopper",
-    "passengers": "1"
+    Class: "repulsorcraft",
+    Model: "T-16 skyhopper",
+    Name: "T-16 skyhopper",
+    "Passengers": "1"
   },
   {
-    class: "repulsorcraft",
-    model: "X-34 landspeeder",
-    name: "X-34 landspeeder",
-    "passengers": "1"
+    Class: "repulsorcraft",
+    Model: "X-34 landspeeder",
+    Name: "X-34 landspeeder",
+    "Passengers": "1"
   },
   {
-    class: "starfighter",
-    model: "Twin Ion Engine/Ln Starfighter",
-    name: "TIE/LN starfighter",
-    "passengers": "0"
+    Class: "starfighter",
+    Model: "Twin Ion Engine/Ln Starfighter",
+    Name: "TIE/LN starfighter",
+    "Passengers": "0"
   },
   {
-    class: "airspeeder",
-    model: "t-47 airspeeder",
-    name: "Snowspeeder",
-    "passengers": "0"
+    Class: "airspeeder",
+    Model: "t-47 airspeeder",
+    Name: "Snowspeeder",
+    "Passengers": "0"
   },
   {
-    class: "space/planetary bomber",
-    model: "TIE/sa bomber",
-    name: "TIE bomber",
-    "passengers": "0"
+    Class: "space/planetary bomber",
+    Model: "TIE/sa bomber",
+    Name: "TIE bomber",
+    "Passengers": "0"
   },
   {
-    class: "assault walker",
-    model: "All Terrain Armored Transport",
-    name: "AT-AT",
-    "passengers": "40"
+    Class: "assault walker",
+    Model: "All Terrain Armored Transport",
+    Name: "AT-AT",
+    "Passengers": "40"
   },
   {
-    class: "walker",
-    model: "All Terrain Scout Transport",
-    name: "AT-ST",
-    "passengers": "0"
+    Class: "walker",
+    Model: "All Terrain Scout Transport",
+    Name: "AT-ST",
+    "Passengers": "0"
   },
   {
-    class: "repulsorcraft",
-    model: "Storm IV Twin-Pod",
-    name: "Storm IV Twin-Pod cloud car",
-    "passengers": "0"
+    Class: "repulsorcraft",
+    Model: "Storm IV Twin-Pod",
+    Name: "Storm IV Twin-Pod cloud car",
+    "Passengers": "0"
   },
   {
-    class: "sail barge",
-    model: "Modified Luxury Sail Barge",
-    name: "Sail barge",
-    "passengers": "500"
+    Class: "sail barge",
+    Model: "Modified Luxury Sail Barge",
+    Name: "Sail barge",
+    "Passengers": "500"
   }
 ];
