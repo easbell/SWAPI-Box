@@ -1,0 +1,12 @@
+.splash {
+  overflow: scroll;
+  height: 200px;
+  background-color: #545558;
+  color: #fff;
+  font-size: 22px;
+  opacity: .7;
+  width: 75%;
+  padding: 25px;
+  border-radius: 12px;
+  margin: auto;
+}
