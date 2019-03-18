@@ -57,7 +57,7 @@ class App extends Component {
 
   simplifyVehicles = (allInfo) => {
     return allInfo.map(info => {
-      return ({name: info.name, model: info.model, class: info.vehicle_class, passengers: info.passengers})
+      return ({Name: info.name, Model: info.model, Class: info.vehicle_class, Passengers: info.passengers})
     })
   }
 
@@ -77,7 +77,7 @@ class App extends Component {
     try {
       const fetchedPlanetInfo = allInfo.map(async info => {
         let fetchedResidents = await this.fetchResidents(info)
-        return ({name: info.name, terrain: info.terrain, population: info.population, climate: info.climate, residents: fetchedResidents})
+        return ({Name: info.name, Terrain: info.terrain, Population: info.population, Climate: info.climate, Residents: fetchedResidents})
       })
       return Promise.all(fetchedPlanetInfo)
     } catch(error) {
@@ -126,14 +126,14 @@ class App extends Component {
   fetchHomeWorld = (homeInfo) => {
     return Promise.all(homeInfo.map(async person => {
       const fetchedData = await fetchCalls(person.homeworld)
-      return ({name: person.name, homeworld: fetchedData.name, population: fetchedData.population})       
+      return ({Name: person.name, Homeworld: fetchedData.name, Population: fetchedData.population})       
     }))
   }
 
   fetchSpecies = (speciesInfo) => {
     return Promise.all(speciesInfo.map(async person => {
       const fetchedData = await fetchCalls(person.species)
-      return ({species: fetchedData.name})
+      return ({Species: fetchedData.name})
     }))
   }
 
