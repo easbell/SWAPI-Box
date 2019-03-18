@@ -2,9 +2,8 @@ import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme'
 import { mockVehicleData, mockVehicleResult } from './mockData/mockVehicleData';
-import { mockSpecies, mockPeopleData, mockAllPeople, mockPeopleResult, fetchAdditionalPeople } from './mockData/mockPeopleData'
+import { mockPeopleData, mockAllPeople, mockPeopleResult, fetchAdditionalPeople } from './mockData/mockPeopleData'
 import { rawPlanetData, mockPlanetResult } from './mockData/mockPlanetData';
-import { fetchCalls } from './fetchCalls';
 
 describe('App', () => {
   let wrapper;
@@ -13,7 +12,11 @@ describe('App', () => {
 
   beforeEach(() => {
     mockFn = jest.fn()
-    wrapper = shallow(<App simplifyVehicles={mockFn} fetchAdditionalPlanetInfo={mockFn}/>)
+    wrapper = shallow(<App 
+      simplifyVehicles={mockFn} 
+      fetchAdditionalPlanetInfo={mockFn}
+      fetchPeopleMocku={mockFn}
+    />)
 
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
@@ -254,6 +257,23 @@ describe('App', () => {
       await wrapper.instance().fetchPlanets(link)
       expect(wrapper.state('errorStatus')).toEqual('failed to fetch')
     });
+  })
+
+  describe('fetchVehicles', () => {
+    it.skip('handleSort calls correct method depending on what filter is passed through', () => {
+      wrapper.instance().handleSort('people')
+      const url = `https://swapi.co/api/${'people'}`
+
+      expect(wrapper.instance().fetchPeopleMock).toHaveBeenCalled()
+    });
+
+    it.skip('handleSort calls correct method depending on what filter is passed through', () => {
+      wrapper.instance().handleSort('planets')
+      const url = `https://swapi.co/api/${'planets'}`
+
+      expect(wrapper.instance().fetchPlanetsMock).toHaveBeenCalled()
+    });
+
   })
 
 })

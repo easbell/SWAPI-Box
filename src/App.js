@@ -35,6 +35,7 @@ class App extends Component {
   handleSort = (filter) => {
     const url = `https://swapi.co/api/${filter}`
     if(filter === 'people') {
+      console.log('in people')
       this.fetchPeople(url);
     } else if (filter === 'planets') {
       this.fetchPlanets(url)
