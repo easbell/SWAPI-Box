@@ -31,6 +31,14 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should have default states', () => {
+    expect(wrapper.state()).toEqual({
+      randomFilm: {},
+      cardsSelected: [],
+      categorySelected: '',
+      errorStatus: ''})
+  })
+
   describe('fetchVehicles', () => {
     it('calls fetch with the correct url', async () => {
 
