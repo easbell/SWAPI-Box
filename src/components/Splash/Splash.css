@@ -26,7 +26,7 @@
 .crawl {
   position: relative;
   transform-origin: 20% 100%;
-  animation: crawl 130s linear;
+  animation: crawl 450s linear;
 }
 
 @keyframes crawl {

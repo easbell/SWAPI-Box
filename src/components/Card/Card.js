@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css'
 
-const Card = ( {cardInfo}) => {
+const Card = ( {cardInfo} ) => {
   const mapProps = () => {
     return Object.keys(cardInfo.card).map(key => {
       return (

@@ -120,7 +120,7 @@ class App extends Component {
     const species = allInfo.splice(10, allInfo.length-1)
     let allPeople = [];
     allInfo.forEach((person, i) => {
-      allPeople.push(Object.assign({}, person, species[i]));
+      allPeople.push({...person, ...species[i]})
     });
     return allPeople;
   }

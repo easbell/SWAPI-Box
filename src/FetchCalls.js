@@ -1,5 +1,3 @@
-import React from 'react';
-
 const fetchCalls = (link) => {
   return fetch(link)
     .then(response => {
