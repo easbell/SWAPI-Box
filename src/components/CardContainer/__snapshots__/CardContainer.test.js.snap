@@ -212,7 +212,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Luke Skywalker",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -230,7 +230,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "C-3PO",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -248,7 +248,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "R2-D2",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -266,7 +266,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Darth Vader",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -284,7 +284,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Leia Organa",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -302,7 +302,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Owen Lars",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -320,7 +320,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Beru Whitesun lars",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -338,7 +338,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "R5-D4",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -356,7 +356,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Biggs Darklighter",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -374,7 +374,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Obi-Wan Kenobi",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "cardInfo": Object {
             "card": Object {
@@ -527,7 +527,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Luke Skywalker",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -545,7 +545,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "C-3PO",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -563,7 +563,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "R2-D2",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -581,7 +581,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Darth Vader",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -599,7 +599,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Leia Organa",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -617,7 +617,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Owen Lars",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -635,7 +635,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Beru Whitesun lars",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -653,7 +653,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "R5-D4",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -671,7 +671,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Biggs Darklighter",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -689,7 +689,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Obi-Wan Kenobi",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "cardInfo": Object {
               "card": Object {
@@ -731,6 +731,5 @@ ShallowWrapper {
       },
     },
   },
-  Symbol(enzyme.__childContext__): null,
 }
 `;
