@@ -26,55 +26,105 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <p>
-          It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
-        </p>,
-        <p>
-          The Empire Strikes Back
-        </p>,
-        <p>
-          1980-05-17
-        </p>,
-      ],
-      "className": "splash",
+      "children": <div
+        className="star-wars"
+      >
+        <div
+          className="crawl"
+        >
+          <p>
+            It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
+          </p>
+          <p>
+            The Empire Strikes Back
+          </p>
+          <p>
+            1980-05-17
+          </p>
+        </div>
+      </div>,
+      "className": "fade",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="crawl"
+        >
+          <p>
+            It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
+          </p>
+          <p>
+            The Empire Strikes Back
+          </p>
+          <p>
+            1980-05-17
+          </p>
+        </div>,
+        "className": "star-wars",
+      },
+      "ref": null,
+      "rendered": Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
+          "children": Array [
+            <p>
+              It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
+            </p>,
+            <p>
+              The Empire Strikes Back
+            </p>,
+            <p>
+              1980-05-17
+            </p>,
+          ],
+          "className": "crawl",
         },
         "ref": null,
-        "rendered": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
+            },
+            "ref": null,
+            "rendered": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "The Empire Strikes Back",
+            },
+            "ref": null,
+            "rendered": "The Empire Strikes Back",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "1980-05-17",
+            },
+            "ref": null,
+            "rendered": "1980-05-17",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "The Empire Strikes Back",
-        },
-        "ref": null,
-        "rendered": "The Empire Strikes Back",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "1980-05-17",
-        },
-        "ref": null,
-        "rendered": "1980-05-17",
-        "type": "p",
-      },
-    ],
+      "type": "div",
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -83,55 +133,105 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <p>
-            It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
-          </p>,
-          <p>
-            The Empire Strikes Back
-          </p>,
-          <p>
-            1980-05-17
-          </p>,
-        ],
-        "className": "splash",
+        "children": <div
+          className="star-wars"
+        >
+          <div
+            className="crawl"
+          >
+            <p>
+              It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
+            </p>
+            <p>
+              The Empire Strikes Back
+            </p>
+            <p>
+              1980-05-17
+            </p>
+          </div>
+        </div>,
+        "className": "fade",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="crawl"
+          >
+            <p>
+              It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
+            </p>
+            <p>
+              The Empire Strikes Back
+            </p>
+            <p>
+              1980-05-17
+            </p>
+          </div>,
+          "className": "star-wars",
+        },
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
+            "children": Array [
+              <p>
+                It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden
+              </p>,
+              <p>
+                The Empire Strikes Back
+              </p>,
+              <p>
+                1980-05-17
+              </p>,
+            ],
+            "className": "crawl",
           },
           "ref": null,
-          "rendered": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
+              },
+              "ref": null,
+              "rendered": "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Empire Strikes Back",
+              },
+              "ref": null,
+              "rendered": "The Empire Strikes Back",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "1980-05-17",
+              },
+              "ref": null,
+              "rendered": "1980-05-17",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "The Empire Strikes Back",
-          },
-          "ref": null,
-          "rendered": "The Empire Strikes Back",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "1980-05-17",
-          },
-          "ref": null,
-          "rendered": "1980-05-17",
-          "type": "p",
-        },
-      ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
