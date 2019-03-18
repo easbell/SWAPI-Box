@@ -64,7 +64,7 @@ class App extends Component {
   fetchPlanets = async (link) => {
     try {
       const fetchedData = await fetchCalls(link)
-      const cardsSelected = this.fetchAdditionalPlanetInfo(fetchedData.results)
+      const cardsSelected = await this.fetchAdditionalPlanetInfo(fetchedData.results)
       this.setState( {cardsSelected} )
     } catch(error) {
       this.setState({
@@ -73,10 +73,26 @@ class App extends Component {
     }
   }
 
-  fetchAdditionalPlanetInfo = (allInfo) => {
-    return allInfo.map(info => {
-      return ({name: info.name, terrain: info.terrain, population: info.population, climate: info.climate})
+  fetchAdditionalPlanetInfo = async (allInfo) => {
+    try {
+      const fetchedPlanetInfo = allInfo.map(async info => {
+        let fetchedResidents = await this.fetchResidents(info)
+        return ({name: info.name, terrain: info.terrain, population: info.population, climate: info.climate, residents: fetchedResidents})
+      })
+      return Promise.all(fetchedPlanetInfo)
+    } catch(error) {
+      this.setState({
+        errorStatus: error.message,
+      })
+    }
+  }
+
+  fetchResidents = async (planet) => {
+    const residents = planet.residents.map(async resident => {
+      const residentInfo = await fetchCalls(resident)
+      return residentInfo.name
     })
+    return Promise.all(residents)
   }
 
   fetchPeople = async (link) => {
